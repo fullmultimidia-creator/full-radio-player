@@ -71,6 +71,14 @@ The station's own AzuraCast pages. Fewer options, but works where scripts are bl
 ```
 Use `theme=light` for the light version.
 
+**Full Radio Player inside Notion:** Notion does not run scripts, but it accepts our player as an embed. Type `/embed`, paste the address and drag the edge to resize (about 90 px tall for the bar, 150 px for the card):
+
+```
+https://referencias.xyz/player/embed/?f=barra&tema=claro
+https://referencias.xyz/player/embed/?f=cartao&tema=escuro&cor=1e5be6
+```
+`f` = `cartao` or `barra`, `tema` = `escuro` or `claro`, `cor` = accent color in 6-digit hex without `#`.
+
 ## 4. Audio stream & now-playing API
 
 * MP3 stream (192 kbps): `https://radio.referencias.xyz/listen/full_radio/radio.mp3`
@@ -162,6 +170,14 @@ As páginas do AzuraCast da própria rádio. Tem menos ajustes, mas funciona ond
 <iframe src="https://radio.referencias.xyz/public/full_radio/history?theme=dark" frameborder="0" style="width:100%;min-height:300px;border:0"></iframe>
 ```
 Use `theme=light` para a versão clara.
+
+**Player da Full dentro do Notion:** o Notion não roda script, mas aceita o nosso player como embed. Digite `/embed`, cole o endereço e arraste a borda para ajustar (uns 90 px de altura para a barra e 150 px para o cartão):
+
+```
+https://referencias.xyz/player/embed/?f=barra&tema=claro
+https://referencias.xyz/player/embed/?f=cartao&tema=escuro&cor=1e5be6
+```
+`f` = `cartao` ou `barra`, `tema` = `escuro` ou `claro`, `cor` = cor de destaque em hexadecimal de 6 dígitos, sem `#`.
 
 ## 4. Áudio ao vivo e API do que está tocando
 
