@@ -6,6 +6,13 @@ Ways to put **[Full Radio](https://referencias.xyz/radio/)**, a free 24/7 online
 
 Live preview and option builder: **https://referencias.xyz/player/**
 
+<p>
+<img src="https://raw.githubusercontent.com/fullmultimidia-creator/full-radio-player/main/docs/cartao-escuro.png" alt="Full Radio Player: dark card" width="49%">
+<img src="https://raw.githubusercontent.com/fullmultimidia-creator/full-radio-player/main/docs/cartao-claro.png" alt="Full Radio Player: light card" width="49%">
+<img src="https://raw.githubusercontent.com/fullmultimidia-creator/full-radio-player/main/docs/barra-escura.png" alt="Full Radio Player: dark bar" width="49%">
+<img src="https://raw.githubusercontent.com/fullmultimidia-creator/full-radio-player/main/docs/barra-clara.png" alt="Full Radio Player: light bar" width="49%">
+</p>
+
 | Option | What it is | Best for |
 |---|---|---|
 | [Full Radio Player](#1-full-radio-player-the-script) | Our own player: card, bar or floating button. Shows what's playing, lets visitors request a song, themeable. | Any site that accepts a script tag |
