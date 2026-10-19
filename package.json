@@ -1,6 +1,6 @@
 {
   "name": "full-radio-player",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Embeddable player for Full Radio, a free 24/7 online radio from Brodowski, Brazil. One script tag, Shadow DOM, no dependencies.",
   "main": "full.js",
   "unpkg": "full.js",
