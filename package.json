@@ -27,9 +27,9 @@
   "sideEffects": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fullmulti/full-radio-player.git"
+    "url": "git+https://github.com/fullmultimidia-creator/full-radio-player.git"
   },
   "bugs": {
-    "url": "https://github.com/fullmulti/full-radio-player/issues"
+    "url": "https://github.com/fullmultimidia-creator/full-radio-player/issues"
   }
 }
