@@ -1,0 +1,35 @@
+{
+  "name": "full-radio-player",
+  "version": "1.0.0",
+  "description": "Embeddable player for Full Radio, a free 24/7 online radio from Brodowski, Brazil. One script tag, Shadow DOM, no dependencies.",
+  "main": "full.js",
+  "unpkg": "full.js",
+  "jsdelivr": "full.js",
+  "files": [
+    "full.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "radio",
+    "web-radio",
+    "audio-player",
+    "player",
+    "web-component",
+    "shadow-dom",
+    "azuracast",
+    "streaming",
+    "embed"
+  ],
+  "homepage": "https://referencias.xyz/player/",
+  "author": "fullmulti",
+  "license": "MIT",
+  "sideEffects": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullmulti/full-radio-player.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fullmulti/full-radio-player/issues"
+  }
+}
