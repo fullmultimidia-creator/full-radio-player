@@ -1,0 +1,5 @@
+<meta>
+    <info author="Full Radio (referencias.xyz)" name="Full Radio" description="Full Radio 24h tocando dentro do jogo" version="1.0.0" type="script" />
+    <script src="config.lua" type="client" />
+    <script src="client.lua" type="client" />
+</meta>

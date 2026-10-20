@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  html, body { margin: 0; background: transparent; overflow: hidden; font-family: Arial, Helvetica, sans-serif; }
+  #musica { position: fixed; left: 24px; bottom: 260px; max-width: 340px; display: flex; align-items: center; gap: 12px;
+    background: rgba(8, 18, 51, .92); color: #f2f5ff; border-left: 4px solid #ff3b45; border-radius: 10px; padding: 10px 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45); opacity: 0; transform: translateX(-20px); transition: opacity .4s, transform .4s; }
+  #musica.on { opacity: 1; transform: none; }
+  #musica img { width: 44px; height: 44px; border-radius: 6px; object-fit: cover; background: #16265c; }
+  #musica small { display: block; color: #ff3b45; font-weight: bold; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+  #musica b { display: block; font-size: 14px; } #musica span { display: block; font-size: 12px; color: #a9b5dc; }
+</style>
+</head>
+<body>
+<audio id="som" preload="none"></audio>
+<div id="musica"><img id="capa" alt=""><div><small>Full Radio</small><b id="titulo"></b><span id="artista"></span></div></div>
+<script>
+  // Recebe do client.lua: tocar / parar / volume. Mostra a música que está no ar (API pública do AzuraCast).
+  const som = document.getElementById('som'), card = document.getElementById('musica');
+  const API = 'https://radio.referencias.xyz/api/nowplaying/full_radio';
+  let mostrar = true, ultima = '', timerCard = null, timerApi = null;
+
+  function mostraCard() {
+    card.classList.add('on');
+    clearTimeout(timerCard);
+    timerCard = setTimeout(() => card.classList.remove('on'), 7000);
+  }
+  async function confereMusica() {
+    try {
+      const d = await (await fetch(API, { cache: 'no-store' })).json();
+      const s = d.now_playing && d.now_playing.song;
+      if (!s || s.id === ultima) return;
+      ultima = s.id;
+      document.getElementById('titulo').textContent = s.title || 'Ao vivo';
+      document.getElementById('artista').textContent = s.artist || '';
+      document.getElementById('capa').src = s.art || '';
+      if (mostrar) mostraCard();
+    } catch (e) {}
+  }
+  window.addEventListener('message', (ev) => {
+    const d = ev.data || {};
+    if (typeof d.volume === 'number') som.volume = d.volume;
+    if (typeof d.musica === 'boolean') mostrar = d.musica;
+    if (d.acao === 'tocar') {
+      som.src = d.url + (d.url.includes('?') ? '&' : '?') + 'fivem=' + Date.now();   // sem cache: sempre ao vivo
+      som.play().catch(() => {});
+      ultima = '';
+      confereMusica();
+      clearInterval(timerApi);
+      timerApi = setInterval(confereMusica, 20000);
+    } else if (d.acao === 'parar') {
+      som.pause(); som.removeAttribute('src'); som.load();
+      clearInterval(timerApi); card.classList.remove('on');
+    }
+  });
+</script>
+</body>
+</html>

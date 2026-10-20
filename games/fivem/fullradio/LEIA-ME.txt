@@ -1,0 +1,13 @@
+FULL RADIO PARA FIVEM
+=====================
+1. Coloque a pasta "fullradio" dentro da pasta resources/ do seu servidor.
+2. No server.cfg, adicione a linha:   ensure fullradio
+3. Reinicie o servidor (ou digite "refresh" e "ensure fullradio" no console).
+
+No jogo:
+  /fullradio        liga ou desliga
+  /fullradio 40     muda o volume (0 a 100)
+
+Ajustes no config.lua: volume inicial, tocar só dentro de veículos, mostrar o nome da música e tecla de atalho.
+
+Quer aparecer na lista de servidores que tocam a Full Radio? https://referencias.xyz/player/gta/

@@ -93,6 +93,18 @@ https://referencias.xyz/player/embed/?f=cartao&tema=escuro&cor=1e5be6
   Also works in VLC, Winamp, radio apps and as an OBS media source.
 * Now playing (JSON): `https://radio.referencias.xyz/api/nowplaying/full_radio`
 
+## 5. Game servers: GTA RP (FiveM, MTA, SA-MP)
+
+Ready-made packages in [`games/`](games/). Players type `/fullradio` to turn the radio on and off (`/fullradio 40` sets the volume on FiveM and MTA). Downloads and step-by-step guide (pt-BR): https://referencias.xyz/player/gta/
+
+* **FiveM (GTA V):** copy `games/fivem/fullradio` to `resources/` and add `ensure fullradio` to `server.cfg`. Audio plays in NUI; a card shows the current song. Options in `config.lua` (vehicle-only mode, key binding, volume).
+* **MTA:SA:** copy `games/mta/fullradio` to `server/mods/deathmatch/resources/` (or zip its contents as `fullradio.zip`), then `refresh` and `start fullradio`. Song titles show in chat.
+* **SA-MP / open.mp:** `games/samp/fullradio.pwn` is a filterscript using `PlayAudioStreamForPlayer` (a ZCMD/Pawn.CMD version is in the file).
+
+## 6. Retro hotels & private servers (Habbo, Club Penguin, Tibia, Ragnarok)
+
+Web-based games and server sites use the regular script from section 1: paste it before `</body>` in the hotel client page (e.g. Nitro `index.html`), the CPPS play page, MyAAC/Gesior templates or FluxCP themes. Guide (pt-BR): https://referencias.xyz/player/retro/
+
 ## About the service
 
 The script loads the now-playing data and audio from `referencias.xyz` and `radio.referencias.xyz`, both run by the author. It tells Full Radio the host name of the site that embeds it, and nothing about visitors. The player keeps a small "Full Radio" link, which is how the free radio gets listeners. If you use the stream directly, please link back to https://referencias.xyz/radio/.
@@ -101,6 +113,7 @@ The script loads the now-playing data and audio from `referencias.xyz` and `radi
 
 * `full.js`: the player (single file, vanilla JS).
 * `wordpress-plugin/full-radio-player/`: the WordPress plugin.
+* `games/`: FiveM and MTA resources and the SA-MP filterscript.
 * `package.json`: the npm package [`full-radio-player`](https://www.npmjs.com/package/full-radio-player).
 
 MIT licensed (the WordPress plugin is GPL-2.0-or-later). Issues and pull requests are welcome.
@@ -193,6 +206,18 @@ https://referencias.xyz/player/embed/?f=cartao&tema=escuro&cor=1e5be6
   Também funciona no VLC, Winamp, apps de rádio e como fonte de mídia no OBS.
 * Música atual (JSON): `https://radio.referencias.xyz/api/nowplaying/full_radio`
 
+## 5. Servidores de jogo: GTA RP (FiveM, MTA, SA-MP)
+
+Pacotes prontos em [`games/`](games/). O jogador digita `/fullradio` para ligar e desligar (`/fullradio 40` muda o volume no FiveM e no MTA). Downloads e passo a passo: https://referencias.xyz/player/gta/
+
+* **FiveM (GTA V):** copie `games/fivem/fullradio` para `resources/` e adicione `ensure fullradio` no `server.cfg`. O som toca na NUI e um cartão mostra a música no ar. Ajustes no `config.lua` (só no veículo, tecla de atalho, volume).
+* **MTA:SA:** copie `games/mta/fullradio` para `server/mods/deathmatch/resources/` (ou compacte o conteúdo como `fullradio.zip`) e rode `refresh` e `start fullradio`. O nome da música aparece no chat.
+* **SA-MP / open.mp:** `games/samp/fullradio.pwn` é um filterscript com `PlayAudioStreamForPlayer` (a versão para ZCMD/Pawn.CMD está no arquivo).
+
+## 6. Hotéis retrô e servidores privados (Habbo, Club Penguin, Tibia, Ragnarok)
+
+Jogos que rodam no navegador e sites de servidor usam o mesmo script da seção 1: cole antes do `</body>` na página do client do hotel (ex.: `index.html` do Nitro), na página "Jogar" do CPPS, nos templates do MyAAC/Gesior ou nos temas do FluxCP. Guia: https://referencias.xyz/player/retro/
+
 ## Sobre o serviço
 
 O script busca os dados e o áudio em `referencias.xyz` e `radio.referencias.xyz`, os dois mantidos pelo autor. Ele avisa a Full Radio o endereço do site onde está embutido e nada sobre os visitantes. O player mantém um link pequeno "Full Radio", que é como a rádio gratuita ganha ouvintes. Se usar o stream direto, deixe um link para https://referencias.xyz/radio/.
@@ -201,6 +226,7 @@ O script busca os dados e o áudio em `referencias.xyz` e `radio.referencias.xyz
 
 * `full.js`: o player (um arquivo, JavaScript puro).
 * `wordpress-plugin/full-radio-player/`: o plugin do WordPress.
+* `games/`: recursos para FiveM e MTA e o filterscript do SA-MP.
 * `package.json`: o pacote npm [`full-radio-player`](https://www.npmjs.com/package/full-radio-player).
 
 Licença MIT (o plugin do WordPress é GPL-2.0-or-later). Issues e pull requests são bem-vindos.

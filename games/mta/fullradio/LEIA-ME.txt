@@ -1,0 +1,14 @@
+FULL RADIO PARA MTA:SA
+======================
+1. Coloque o fullradio.zip dentro de server/mods/deathmatch/resources/ (se o arquivo veio com outro nome, renomeie para fullradio.zip)
+   (o MTA lê o .zip direto, não precisa descompactar; se preferir descompactar, crie a pasta "fullradio" e ponha os arquivos dentro)
+2. No console do servidor:   refresh   e depois   start fullradio
+   (para iniciar sempre, adicione <resource src="fullradio" startup="1" /> no mtaserver.conf)
+
+No jogo:
+  /fullradio        liga ou desliga
+  /fullradio 40     muda o volume (0 a 100)
+
+Ajustes no config.lua: volume inicial, tocar só dentro de veículos, avisar a música no chat e tecla de atalho.
+
+Quer aparecer na lista de servidores que tocam a Full Radio? https://referencias.xyz/player/gta/
